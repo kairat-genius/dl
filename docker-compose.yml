@@ -11,3 +11,10 @@ services:
       - POSTGRES_PASSWORD=test
       - POSTGRES_USER=test
       - POSTGRES_DB=test
+
+  redis:
+    image: redis
+    container_name: re
+    command: redis-server --requirepass redistest
+    ports:
+      - "6379:6379"
